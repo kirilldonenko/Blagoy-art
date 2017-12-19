@@ -1,0 +1,27 @@
+{
+  "name": "swarovski",
+  "version": "1.0.0",
+  "description": "test task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kirilldonenko/Swarovski.git"
+  },
+  "author": "Kirill Donenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kirilldonenko/Swarovski/issues"
+  },
+  "homepage": "https://github.com/kirilldonenko/Swarovski#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.2.3",
+    "css-mqpacker": "^6.0.1",
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sass": "^3.1.0"
+  }
+}

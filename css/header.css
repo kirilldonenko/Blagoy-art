@@ -14,7 +14,7 @@
   min-width: 320px;
   height: 115px;
   border: 1px solid #000;
-  background-color: #fff !important;
+  background-color: #fff;
 }
 .mobile-nav {
   margin-left: 55px;
