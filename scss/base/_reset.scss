@@ -4,12 +4,12 @@
 body {
 	margin: 0px;
 	padding: 0px;
-	font-family: $base-font-family;
+	font-family: $custom-font-family;
 	background-color: $base-bg;
 	height: 100%;
 	line-height: 1;
 	position: relative;
-	font-size: $base-font-size!important;
+	font-size: $base-font-size;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }

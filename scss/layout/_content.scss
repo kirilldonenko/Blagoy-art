@@ -4,6 +4,7 @@
 .main-wrapper{
   padding: 0 0 0 0;
   min-width: $min-width;
+  max-width: $max-width;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -78,7 +79,7 @@ h3{
   -webkit-order: 2;
   flex-grow: 1;
   -webkit-flex-grow: 1;
-  background: #fff000;
+  background: $base-bg;
 }
 
 
@@ -98,7 +99,7 @@ h3{
   position: relative;
 }
 .slider-item {
-  min-width: 320px;
+  min-width: $min-width;
   height: 126px;
   background: url("../img/bg-slider.png") no-repeat center center;
   background-size: cover;
@@ -116,10 +117,10 @@ h3{
   height: 45px;
   margin-left: 30px;
   padding: 5px 0 5px 10px;
-  background-color: #cb944c;
+  background-color: $base-color;
   font-size: 15px;
   line-height: 18px;
-  color: #fff;
+  color: $base-bg;
 }
 .slick-prev,
 .slick-next {
@@ -134,21 +135,25 @@ h3{
 }
 .slick-prev {
   left: 0;
-  background: #cb944c url("../img/arrow-left.png") no-repeat 5px center;
+  background: $base-color url("../img/arrow-left.png") no-repeat 5px center;
+
+  &:hover {
+    background: $base-bg url("../img/arrow-right-brown.png") no-repeat 7px center;
+    transform: rotate(180deg);
+  }
 }
 .slick-next {
   right: 0;
-  background: #cb944c url("../img/arrow-left.png") no-repeat 5px center;
+  background: $base-color url("../img/arrow-left.png") no-repeat 5px center;
   transform: rotate(180deg);
+
+  &:hover {
+    transform: rotate(360deg);
+    background: $base-bg url("../img/arrow-right-brown.png") no-repeat 7px center;  
+  }
 }
-.slick-prev:hover {
-  background: #fff url("../img/arrow-right-brown.png") no-repeat 7px center;
-  transform: rotate(180deg);
-}
-.slick-next:hover {
-  transform: rotate(360deg);
-  background: #fff url("../img/arrow-right-brown.png") no-repeat 7px center;  
-}
+
+
 .slick-dots li{
   display: none;
 }
@@ -178,18 +183,21 @@ h3{
     display: flex;
     width: 110px;
     margin: 50px auto 30px;
+
+    li {
+      list-style-type:none;
+      width: 20px;
+      height: 20px;
+      margin-left: 25px;
+      background-color: $base-color;
+      border-radius: 50%;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
   }
-  .slick-dots li {
-    list-style-type:none;
-    width: 20px;
-    height: 20px;
-    margin-left: 25px;
-    background-color: #cb944c;
-    border-radius: 50%;
-  }
-  .slick-dots li:first-child {
-    margin-left: 0;
-  }
+
   .slick-dots li{
     display: block;
   }
@@ -221,21 +229,24 @@ h3{
   }
   .slick-prev {
     left: 0;
-    background: #cb944c url("../img/arrow-left-big.png") no-repeat 7px center;
+    background: $base-color url("../img/arrow-left-big.png") no-repeat 7px center;
+
+    &:hover {
+      background: #fff url("../img/arrow-right-big.png") no-repeat 19px center;
+      transform: rotate(180deg);
+    }
   }
   .slick-next {
     right: 0;
-    background: #cb944c url("../img/arrow-left-big.png") no-repeat 10px center;
+    background: $base-color url("../img/arrow-left-big.png") no-repeat 10px center;
     transform: rotate(180deg);
+
+    &:hover {
+      transform: rotate(360deg);
+      background: #fff url("../img/arrow-right-big.png") no-repeat 16px center;  
+    }
   }
-  .slick-prev:hover {
-    background: #fff url("../img/arrow-right-big.png") no-repeat 19px center;
-    transform: rotate(180deg);
-  }
-  .slick-next:hover {
-    transform: rotate(360deg);
-    background: #fff url("../img/arrow-right-big.png") no-repeat 16px center;  
-  }
+
 }
 
 

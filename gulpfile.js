@@ -4,6 +4,7 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var mqpacker = require("css-mqpacker");
+var browserSync = require("browser-sync");
 
 gulp.task('sass', function() {
     return gulp.src('scss/**/*.scss')
@@ -17,5 +18,19 @@ gulp.task('sass', function() {
             sort: true
         })
     ]))
-    .pipe(gulp.dest('build/css'));
+    .pipe(gulp.dest('css'));
+});
+gulp.task('browser-sync', function() {
+  browserSync({
+    server: {
+      baseDir: 'css'
+    },
+    notify: false
+  });  
+});
+
+gulp.task('watch', ['browser-sync', 'sass'], function() {
+  gulp.watch('scss/**/*.scss', ['sass']);
+  gulp.watch('*.html', browserSync.reload);
+  gulp.watch('js/**/*.js', browserSync.reload);
 });

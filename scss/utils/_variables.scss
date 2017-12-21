@@ -1,11 +1,14 @@
 /* reset */
 $min-width: 320px; 
-$max-width: 1200px; 
-$base-bg: #FFF; 
+$max-width: 1920px; 
+$base-bg: #fff; 
 $base-font-size: 13px; 
 $base-line-height: 18px; 
-$base-font-family: Arial, sans-serif; 
-$custom-font-family: 'Open Sans', sans-serif; 
+$base-font-family: Arial, sans-serif;
+$base-color: #cb944c;
+$bg-blue: #3eade2;
+$border-color: #dddfdf;
+$custom-font-family: 'PTSans', sans-serif; 
 $link-color: #100da9;
 $default-transition:all 0.2s linear;
 
@@ -13,6 +16,8 @@ $default-transition:all 0.2s linear;
 
 //text, titles
 $text-color: #000;
+$text-color-grey: #666;
+$text-color-blue: #252a54;
 $title-color: #000;
 $title-font-family: $custom-font-family;
 

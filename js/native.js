@@ -1,7 +1,7 @@
 //    Отображение и скрытие меню mobile-nav в мобильной версии
 
 $(".mobile-nav__btn").click(function() {
-  $( ".nav-wrap" ).toggle();
+  $( ".main-nav__list" ).toggle();
 });
 
 //    Отображение и скрытие меню main-nav__list-sub в 

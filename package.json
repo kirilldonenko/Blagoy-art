@@ -18,7 +18,9 @@
   "homepage": "https://github.com/kirilldonenko/Swarovski#readme",
   "devDependencies": {
     "autoprefixer": "^7.2.3",
+    "browser-sync": "^2.18.13",
     "css-mqpacker": "^6.0.1",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^7.0.0",
