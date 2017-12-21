@@ -1,2 +1,1 @@
-# Swarovski
 # Blagoy-art
