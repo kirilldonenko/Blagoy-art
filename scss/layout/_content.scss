@@ -2,10 +2,10 @@
 //main styles
 
 .main-wrapper{
-  padding: 0 0 0 0;
   min-width: $min-width;
   max-width: $max-width;
-  width: 100%;
+  margin: 0 auto;
+  padding: 0;
   position: relative;
   overflow: hidden;
   min-height:100%;
@@ -23,7 +23,7 @@
 }
 .wrapper{
   min-width: $min-width;
-  padding: 0 40px 0 40px;
+  padding: 0;
   margin: 0 auto;
   position: relative;
 }
@@ -87,192 +87,106 @@ h3{
   body{min-height: 100hv; width: 100%; display: flex; flex-direction: column;}
 }
 
-.wrapper {
-  padding: 0;
-}
+.catalog {
 
-.slider {
+}
+.catalog__list {
+  @include flex-column();
+  margin: 0 auto;
+  padding: 10px;
+  list-style: none;
+  background-color: $border-color;
+}
+.catalog__item {
   position: relative;
-}
+  width: 300px;
+  height: 300px;
+  margin-bottom: 20px;
+  background-color: $base-bg;
 
-.slider-item {
-  min-width: $min-width;
-  height: 126px;
-  background: url("../img/bg-slider.png") no-repeat center center;
-  background-size: cover;
+  &:nth-child(1) {
+    background: url("../img/wedding.jpg") no-repeat center center;
+    background-size: contain;
+  }
+  &:nth-child(2) {
+    background: url("../img/hair.jpg") no-repeat center center;
+    background-size: contain;
+  }
+  &:nth-child(3) {
+    background: url("../img/brooches.jpg") no-repeat center center;
+    background-size: contain;
+  }
+  &:nth-child(4) {
+    background: url("../img/male.jpg") no-repeat center center;
+    background-size: contain;
+  }
+  &:nth-child(5) {
+    background: url("../img/clutches.jpg") no-repeat center center;
+    background-size: contain;
+  }
+  &:nth-child(6) {
+    margin-bottom: 0;
+    background: url("../img/baby.jpg") no-repeat center center;
+    background-size: contain;
+  }  
 }
-
-.slider__wrap {
+.catalog__link {
   width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.slider__text {
-  width: 190px;
-  height: 45px;
-  margin-left: 30px;
-  padding: 5px 0 5px 10px;
-  background-color: $base-color;
-  font-size: 15px;
-  line-height: 18px;
-  color: $base-bg;
-}
-
-.slick-prev,
-.slick-next {
+  height: 50px;
   position: absolute;
-  top: 48px;
-  z-index: 10;
-  display: block;
-  width: 20px;
-  height: 30px;
-  border: none;
-  background-size: 7px 15px;
+  bottom: 0;
+  @include flex-row();
+  background-color: $base-color-light;
+  opacity: 0.7;  
 }
-
-.slick-prev {
-  left: 0;
-  background: $base-color url("../img/arrow-left.png") no-repeat 5px center;
-
+.catalog__text {
+  display: inline-block;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: $text-color;
+  text-align: center;
+  
   &:hover {
-    background: $base-bg url("../img/arrow-right-brown.png") no-repeat 7px center;
-    transform: rotate(180deg);
+    font-weight: 700;
+    color: $base-color;
   }
-    
+  
 }
 
-.slick-next {
-  right: 0;
-  background: $base-color url("../img/arrow-left.png") no-repeat 5px center;
-  transform: rotate(180deg);
 
-  &:hover {
-    transform: rotate(360deg);
-    background: $base-bg url("../img/arrow-right-brown.png") no-repeat 7px center;  
+
+
+
+@media screen and (min-width: 767px) {
+
+  .catalog__list {
+    @include flex-row;
   }
+  
+  .catalog__item {
+    margin: 10px;
     
-}
-
-.slick-dots li{
-  display: none;
-}
-
-@media screen and (min-width: 767px){
-    
-.wrapper {
-  min-width: 743px;
-}
-    
-.slider-item {
-    min-width: 744px;
-    height: 165px;
-}
-    
-.slider__text {
-    width: 290px;
-    height: 65px;
-    font-size: 22px;
-    line-height: 28px;
-}
-    
-.slick-prev,
-.slick-next {
-    top: 50px;
-    z-index: 10;
-    width: 20px;
-    height: 65px;
-}
-    
-.slick-dots {
-    display: flex;
-    width: 110px;
-    margin: 50px auto 30px;
-
-    li {
-      list-style-type:none;
-      width: 20px;
-      height: 20px;
-      margin-left: 25px;
-      background-color: #eedcc4;
-      border-radius: 50%;
-
-      &:first-child {
-        margin-left: 0;
-      }
-        
-    }
-    
+    &:nth-child(6) {
+    margin-bottom: 10px;
+    }  
   }
-    
-li.slick-active {
-    background-color: $base-color;    
+}
+  
+  @media screen and (min-width: 1300px) {
+
+  .catalog__item {
+    width: 400px;
+    height: 400px; 
+  }
+  .catalog__link {
+    height: 80px;
+  }
+  
+  
+  
 }
 
-.slick-dots li{
-    display: block;
-}
-    
-.slick-dots li button{
-    display: none;
-}
-    
-}
 
-@media screen and (min-width: 1355px){
-    
-  .wrapper {
-    min-width: 1355px;
-  }
-    
-  .slider-item {
-    min-width: 1355px;
-    height: 325px;
-  }
-    
-  .slick-prev,
-  .slick-next {
-    top: 98px;
-    width: 40px;
-    height: 130px;
-  }
-    
-  .slider__text {
-    width: 500px;
-    height: 130px;
-    margin-left: 70px;
-    padding: 10px 0 10px 30px;
-    font-size: 42px;
-    line-height: 48px;
-  }
-    
-  .slick-prev {
-    left: 0;
-    background: $base-color url("../img/arrow-left-big.png") no-repeat 7px center;
-
-    &:hover {
-      background: #fff url("../img/arrow-right-big.png") no-repeat 19px center;
-      transform: rotate(180deg);
-    }
-      
-  }
-    
-  .slick-next {
-    right: 0;
-    background: $base-color url("../img/arrow-left-big.png") no-repeat 10px center;
-    transform: rotate(180deg);
-
-    &:hover {
-      transform: rotate(360deg);
-      background: #fff url("../img/arrow-right-big.png") no-repeat 16px center;  
-    }
-      
-  }
-
-}
 
 
 

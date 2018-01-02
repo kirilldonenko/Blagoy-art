@@ -46,8 +46,8 @@
 		<div class="nav-wrap">
 		  <nav class="main-nav">
 		    <ul class="main-nav__list">
-                <li id="catalog" class="main-nav__item-title">
-                  <a id="main-nav__link" class="main-nav__link" href="#"><span class="main-nav__text-catalog">Каталог товаров</span></a>
+		      <li id="catalog" class="main-nav__item-title">
+			<a id="main-nav__link" class="main-nav__link" href="#"><span class="main-nav__text-catalog">Каталог товаров</span></a>
 			<ul class="main-nav__list-sub">
 			  <li class="main-nav__item">
 			    <a id="link-sub2-1" href="#"><span class="main-nav__text main-nav__text-sub">Свадебная бижутерия</span></a>
@@ -159,7 +159,29 @@
 		    </div> 
 		  </div>
 		</div>
-	      </div>		
+	      </div>
+	      <div class="catalog">
+		<ul class="catalog__list">
+		  <li class="catalog__item">
+		    <a class="catalog__link" href="#"><span class="catalog__text">Свадебная бижутерия</span></a>
+		  </li>
+		  <li class="catalog__item">
+		    <a class="catalog__link" href="#"><span class="catalog__text">Аксессуары для волос</span></a>
+		  </li>
+		  <li class="catalog__item">
+		    <a class="catalog__link" href="#"><span class="catalog__text">Броши</span></a>
+		  </li>
+		  <li class="catalog__item">
+		    <a class="catalog__link" href="#"><span class="catalog__text">Мужские аксессуары</span></a>
+		  </li>
+		  <li class="catalog__item">
+		    <a class="catalog__link" href="#"><span class="catalog__text">Клатчи</span></a>
+		  </li>
+		  <li class="catalog__item">
+		    <a class="catalog__link" href="#"><span class="catalog__text">Детская бижутерия</span></a>
+		  </li>
+		</ul>
+	      </div>
 	    </main>	
 
 	    <!-- CONTENT EOF   -->
@@ -186,6 +208,7 @@
 	  <script type="text/javascript">
             $(document).ready(function () {
               $('.single-item').slick({
+		autoplay: true,
                 prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button"></button>',
                 nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"></button>',
                 arrows: true,
