@@ -60,6 +60,7 @@ gulp.task("copy", function () {
   return gulp.src("*.html")
           .pipe(gulp.dest("build"));
 });
+
 gulp.task("update", ["copy"], function (done) {
   server.reload();
   done();

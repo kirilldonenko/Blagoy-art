@@ -65,7 +65,7 @@ header{
   }
 }
     
-  .main-nav__text-catalog:before,
+  .main-nav__text-catalog:before,  
   .main-nav__text-catalog:after {
     display: none;
   }
@@ -77,7 +77,7 @@ header{
 /*   Скрытие блоков на mobile version */
 
 .header-form, 
-.header-contact,
+.block-contact,
 .cart-and-log,
 .main-nav__list,
 .line {
@@ -146,11 +146,11 @@ header{
     
 }
 
-.header-logo {
+.block-logo {
   background-color: $base-bg;
 }
 
-.header-logo__link {
+.block-logo__link {
   display: block;
   width: 192px;
   height: 24px;
@@ -159,7 +159,7 @@ header{
   background-size: contain;
 }
 
-.header-logo__text {
+.block-logo__text {
   display: block;
   width: 180px;
   height: 11px;
@@ -266,13 +266,13 @@ header{
     border-bottom: 1px solid $border-color;
   }
 
-  .header-logo__link {
+  .block-logo__link {
     width: 180px;
     margin: 0;
     margin-bottom: 5px;
   }
     
-  .header-logo__text {
+  .block-logo__text {
     margin: 0;
   }
     
@@ -304,7 +304,7 @@ header{
     z-index: 5;
   }
     
-  .header-contact,
+  .block-contact,
   .cart-and-log {
     display: block;
     width: 240px;
@@ -314,12 +314,12 @@ header{
     align-items: center;
   }
     
-  .header-contact__phone {
+  .block-contact__phone {
     font-size: 15px;
     color: $text-color;
   }
     
-  .header-contact__text {
+  .block-contact__text {
     display: block;
     font-size: 10px;
     color: $text-color-blue;
@@ -419,7 +419,7 @@ header{
   }
     
   .main-nav__list {
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
     list-style: none;
   }
@@ -520,12 +520,12 @@ header{
     margin: 0 55px;
   }
 
-  .header-logo__link {
+  .block-logo__link {
     width: 250px;
     margin-bottom: 10px;
   }
     
-  .header-logo__text {
+  .block-logo__text {
     width: 250px;
     font-size: 13px;
   }
@@ -544,16 +544,16 @@ header{
     background-size: contain;
   }
     
-  .header-contact {
+  .block-contact {
     width: 340px;
     height: 30px;
   }
     
-  .header-contact__phone {
+  .block-contact__phone {
     font-size: 23px;
   }
     
-  .header-contact__text {
+  .block-contact__text {
     font-size: 14px;
   }
     

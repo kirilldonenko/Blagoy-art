@@ -107,3 +107,11 @@
   align-items: center;
   flex-wrap: wrap;
 }
+
+@mixin flex-around() {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
